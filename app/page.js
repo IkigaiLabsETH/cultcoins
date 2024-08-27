@@ -1,23 +1,21 @@
 "use client";
 
-import Image from "next/image";
-import Launch from "./components/launch"; // Import the Launch component
 import React from 'react';
-import TokenData from './components/tokendata';
+import Launch from "./components/launch";
+import TokenData from './components/tokendata'; // Ensure the path is correct
+import TrendingTokens from './components/trendingtokens';
 
 const Home = () => {
-  const chainId = 'yourChainId'; // Define your chainId here
-  const pairIdOrTokenId = 'yourPairIdOrTokenId'; // Define your pairIdOrTokenId here
+  const chainId = 'solana';
+  const pairIdOrTokenId = 'A8C3xuqscfmyLrte3VmTqrAq8kgMASius9AFNANwpump';
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
       </div>
       <Launch />
-      <div>
-            <h1>Moonshot Token Data</h1>
-            <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} />
-        </div>
+      <TrendingTokens />
+      <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} />
     </main>
   );
 }
