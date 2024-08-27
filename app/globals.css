@@ -3,20 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0; /* Update to your brand's primary text color */
+  --background-start-rgb: 214, 219, 220; /* Update to your brand's background color */
+  --background-end-rgb: 255, 255, 255; /* Update to your brand's background color */
+  --primary-color: 255, 204, 0; /* Example brand primary color */
+  --secondary-color: 0, 0, 0; /* Example brand secondary color */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255; /* Update to your brand's primary text color for dark mode */
+    --background-start-rgb: 0, 0, 0; /* Update to your brand's background color for dark mode */
+    --background-end-rgb: 0, 0, 0; /* Update to your brand's background color for dark mode */
   }
 }
 
 body {
+  font-family: 'YourBrandFont', sans-serif; /* Update to your brand's font */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +27,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @layer utilities {
@@ -36,10 +42,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #1a1a1a;
+  background-color: var(--secondary-color); /* Use brand secondary color */
   padding: 2rem;
   border-radius: 8px;
-  color: #fff;
+  color: var(--primary-color); /* Use brand primary color */
 }
 
 .form-group {
@@ -54,10 +60,10 @@ body {
 .form-group input,
 .form-group textarea {
   padding: 0.5rem;
-  border: 1px solid #333;
+  border: 1px solid lighten(var(--secondary-color), 20%); /* Lighter border color */
   border-radius: 4px;
-  background-color: #2a2a2a;
-  color: #fff;
+  background-color: darken(var(--secondary-color), 10%); /* Slightly darker background */
+  color: var(--primary-color); /* Use brand primary color */
 }
 
 .form-group input[type="file"] {
@@ -74,11 +80,17 @@ body {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--primary-color); /* Use brand primary color */
+  color: var(--secondary-color); /* Use brand secondary color */
   cursor: pointer;
 }
 
 .links button:hover {
-  background-color: #444;
+  background-color: darken(var(--primary-color), 10%); /* Slightly darker shade on hover */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }

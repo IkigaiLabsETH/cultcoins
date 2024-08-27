@@ -5,6 +5,7 @@ import Launch from "./components/launch";
 import TokenData from './components/tokendata'; // Import TokenData component
 import { buyIx } from './api/buy'; // Import buyIx function
 import { sellIx } from './api/sell'; // Import sellIx function
+import './styles.css'; // Import the CSS file
 
 const Home = () => {
   const chainId = 'solana';
@@ -36,8 +37,14 @@ const Home = () => {
       </div>
       <Launch />
       <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} /> {/* Use TokenData component */}
-      <button onClick={handleBuy}>Buy Token</button> {/* Add Buy button */}
-      <button onClick={handleSell}>Sell Token</button> {/* Add Sell button */}
+      <div className="button-container">
+        <button className="buy-button" onClick={handleBuy}>
+          <span className="icon">⬆️</span> Buy
+        </button>
+        <button className="sell-button" onClick={handleSell}>
+          <span className="icon">⬇️</span> Sell
+        </button>
+      </div>
     </main>
   );
 }
