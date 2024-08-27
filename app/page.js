@@ -6,7 +6,9 @@ import TokenData from './components/tokendata'; // Import TokenData component
 import { buyIx } from './api/buy'; // Import buyIx function
 import { sellIx } from './api/sell'; // Import sellIx function
 import './styles.css'; // Import the CSS file
-import Button from './components/button'; // Import the Button component
+// import Button from './components/button'; // Import the Button component
+import Chart from './components/Chart'; // Import the Chart component
+
 
 
 const Home = () => {
@@ -40,6 +42,9 @@ const Home = () => {
       </div>
       <div className="token-data-section">
         <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} /> {/* Use TokenData component */}
+      </div>
+      <div className="chart-section"> {/* Add a section for the Chart */}
+        <Chart />
       </div>
       <div className="button-container">
         <button className="buy-button" onClick={handleBuy}>

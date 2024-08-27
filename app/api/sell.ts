@@ -36,7 +36,7 @@ export const sellIx = async (): Promise<void> => {
   const creator = Keypair.fromSecretKey(Uint8Array.from(testWallet));
   console.log('Creator: ', creator.publicKey.toBase58());
 
-  const tokenAmount = 10000n * 1000000000n; // Sell 10k tokens
+  const tokenAmount = BigInt(10000) * BigInt(1000000000); // Sell 10k tokens
 
   // Sell example
   const collateralAmount = await token.getCollateralAmountByTokens({

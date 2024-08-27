@@ -15,6 +15,7 @@
     "@solana/wallet-adapter-wallets": "^0.19.32",
     "@solana/web3.js": "^1.95.3",
     "@wen-moon-ser/moonshot-sdk": "^2.0.5",
+    "express": "^4.19.2",
     "next": "14.2.6",
     "pino-pretty": "^11.2.2",
     "react": "^18.3.1",
