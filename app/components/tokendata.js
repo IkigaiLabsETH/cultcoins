@@ -32,7 +32,7 @@ const TokenData = ({ chainId, pairIdOrTokenId }) => {
             <h1>Token Data</h1>
             <div className="token-details">
                 <div className="token-item">
-                    <strong>URL:</strong> {data.url || 'N/A'}
+                    <strong>URL:</strong> <a href={data.url} target="_blank" rel="noopener noreferrer">{data.url || 'N/A'}</a>
                 </div>
                 <div className="token-item">
                     <strong>Chain ID:</strong> {data.chainId || 'N/A'}
@@ -74,7 +74,13 @@ const TokenData = ({ chainId, pairIdOrTokenId }) => {
                     <strong>Profile Description:</strong> {data.profile?.description || 'N/A'}
                 </div>
                 <div className="token-item">
-                    <strong>Profile Links:</strong> {data.profile?.links?.join(', ') || 'N/A'}
+                    <strong>Profile Links:</strong> 
+                    {data.profile?.links?.map((link, index) => (
+                        <span key={index}>
+                            <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+                            {index < data.profile.links.length - 1 && ', '}
+                        </span>
+                    )) || 'N/A'}
                 </div>
                 {/* Add more fields as necessary */}
             </div>

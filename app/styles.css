@@ -19,28 +19,101 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffeb3b; /* Yellow background */
+  color: #000; /* Black text */
+  box-shadow: 5px 5px 0 #000; /* Black shadow */
 }
 
 .buy-button {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffeb3b; /* Yellow background */
+  color: #000; /* Black text */
 }
 
 .buy-button:hover {
-  background-color: #00ff00; /* Green background on hover */
-  color: #fff; /* White text on hover */
+  background-color: #ffeb3b; /* Yellow background on hover */
+  color: #000; /* Black text on hover */
 }
 
 .sell-button {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffeb3b; /* Yellow background */
+  color: #000; /* Black text */
 }
 
 .sell-button:hover {
-  background-color: #ff0000; /* Red background on hover */
-  color: #fff; /* White text on hover */
+  background-color: #ffeb3b; /* Yellow background on hover */
+  color: #000; /* Black text on hover */
 }
 
 .icon {
   margin-right: 10px;
+}
+
+.launch-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.token-data-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  flex-direction: column;
+}
+
+.buy-button, .sell-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Ensure the main container takes full height and centers its content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Center the launch and token data sections */
+.launch-section,
+.token-data-section {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+/* Ensure the button container is at the bottom */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+/* Style the buttons */
+.buy-button,
+.sell-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 8px;
 }

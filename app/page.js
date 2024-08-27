@@ -33,10 +33,12 @@ const Home = () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+      <div className="launch-section">
+        <Launch />
       </div>
-      <Launch />
-      <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} /> {/* Use TokenData component */}
+      <div className="token-data-section">
+        <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} /> {/* Use TokenData component */}
+      </div>
       <div className="button-container">
         <button className="buy-button" onClick={handleBuy}>
           <span className="icon">⬆️</span> Buy
