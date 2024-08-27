@@ -1,36 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Cult Coins Tokenomics 
 
-## Getting Started
+strategy using Moonshot's "Launch, Lock & Earn" aims to deploy Cult Token while securing long-term rewards for creators and early supporters. The process begins with the deployment of Cult Token on Moonshot, followed by migration to Meteora, where liquidity pool tokens are distributed: 20% to the creator, 10% to Moonshot, and 70% to the top 50 holders. Meteora’s dynamic fee structure starts at 10% and reduces over time, incentivizing early participation. For example, a daily trading volume of $1M could yield $26,790 in earnings for a top holder on day one. Rewards can be claimed through the Meteora app, with frequent claims recommended to minimize losses due to token price fluctuations.
 
-First, run the development server:
+Additional mechanics include adjustable slippage, with the default set at 15%, and market cap calculations based on total supply multiplied by the token price. The minimum buy amount is set at 0.005 SOL to prevent spam, while the minimum sell amount is 0.001 SOL equivalent. The migration process typically takes 30 seconds to 2 minutes, during which trading on Moonshot is paused.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The structure encourages long-term holding over short-term selling, ensuring ongoing earnings aligned with the token's growth and success. This framework leverages Moonshot's features to support sustainable growth and aligned incentives for Cult Token stakeholders.
