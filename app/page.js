@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Launch from "./components/launch";
-import TokenData from './components/tokendata'; // Ensure the path is correct
 import TrendingTokens from './components/trendingtokens';
 
 const Home = () => {
@@ -15,7 +14,6 @@ const Home = () => {
       </div>
       <Launch />
       <TrendingTokens />
-      <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} />
     </main>
   );
 }

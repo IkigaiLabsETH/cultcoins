@@ -12,12 +12,14 @@ export const buyIx = async (): Promise<void> => {
   console.log('--- Buying token example ---');
 
   const rpcUrl = 'https://api.devnet.solana.com';
+  const authToken = ''; // This can be an empty string for now
 
   const connection = new Connection(rpcUrl);
 
   const moonshot = new Moonshot({
     rpcUrl,
     environment: Environment.DEVNET,
+    authToken,
     chainOptions: {
       solana: { confirmOptions: { commitment: 'confirmed' } },
     },

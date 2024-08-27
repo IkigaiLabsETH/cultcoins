@@ -10,13 +10,16 @@ import testWallet from '../test-wallet.json';
 
 export const sellIx = async (): Promise<void> => {
   console.log('--- Selling token example ---');
+
   const rpcUrl = 'https://api.devnet.solana.com';
+  const authToken = ''; // This can be an empty string for now
 
   const connection = new Connection(rpcUrl);
 
   const moonshot = new Moonshot({
     rpcUrl,
     environment: Environment.DEVNET,
+    authToken,
     chainOptions: {
       solana: { confirmOptions: { commitment: 'confirmed' } },
     },
@@ -33,9 +36,9 @@ export const sellIx = async (): Promise<void> => {
   const creator = Keypair.fromSecretKey(Uint8Array.from(testWallet));
   console.log('Creator: ', creator.publicKey.toBase58());
 
-  const tokenAmount = 10000n * 1000000000n; // Buy 10k tokens
+  const tokenAmount = 10000n * 1000000000n; // Sell 10k tokens
 
-  // Buy example
+  // Sell example
   const collateralAmount = await token.getCollateralAmountByTokens({
     tokenAmount,
     tradeDirection: 'SELL',
@@ -47,7 +50,7 @@ export const sellIx = async (): Promise<void> => {
     tokenAmount,
     collateralAmount,
     tradeDirection: 'SELL',
-    fixedSide: FixedSide.IN, // This means you will pay exactly the token amount slippage is applied to collateral amount
+    fixedSide: FixedSide.IN, // This means you will pay exactly the token amount and slippage is applied to collateral amount
   });
 
   const priorityIx = ComputeBudgetProgram.setComputeUnitPrice({
