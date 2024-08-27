@@ -24,3 +24,64 @@ Another compelling reason for our shift is the superior user experience (UX) tha
 The memecoin market is evolving rapidly, and Moonshot positions itself as more than just a launchpad; it’s part of a larger trend recognizing memecoin trading as a legitimate retail business opportunity.
 
 ---
+
+### Overview
+
+A **bonding curve mechanism** designed for the buying and selling of Moonshot tokens, which are represented on a decentralized exchange (DEX). The bonding curve is a mathematical model used to manage the pricing and supply of tokens, ensuring a dynamic price that adjusts based on the number of tokens in circulation and the amount of collateral (in SOL) held.
+
+### Key Components
+
+1. **Bonding Curve Equation**: 
+   - The bonding curve follows the equation: `vTOKEN * vSOL = k`
+   - `vTOKEN` represents the virtual reserve of the token.
+   - `vSOL` represents the virtual reserve of the collateral (SOL).
+   - `k` is a constant that dictates the shape of the curve.
+
+2. **Initial Values**:
+   - **Initial Token Reserve (iVTOKEN)**: 1,073,000,000 tokens.
+   - **Initial Collateral Reserve (iVSOL)**: 30 SOL.
+   - **Initial Token Price**: 27.95 lamports (or 0.00000002795 SOL).
+
+3. **Market Cap Threshold for Migration**:
+   - **Threshold**: Migration occurs when the market cap reaches 345 SOL or 80% of the tokens are sold on the curve.
+   - **Collateral Collected**: 87.9 SOL at migration.
+   - **Price Multiple at Migration**: Approximately 16x from the initial price.
+
+### Core Functionality (BUY/SELL Mechanisms)
+
+- **Buying Tokens**:
+  - **buy_exact_tokens_out**: Determines the SOL cost to buy a specific amount of tokens, considering fees and slippage.
+  - **buy_exact_collateral_in**: Calculates the number of tokens received when a specific amount of SOL is spent, accounting for fees and slippage.
+
+- **Selling Tokens**:
+  - **sell_exact_tokens_in**: Determines the amount of SOL received for selling a specific number of tokens, after deducting fees and considering slippage.
+  - **sell_exact_collateral_out**: Calculates the number of tokens needed to receive a specific amount of SOL, factoring in fees and slippage.
+
+### Migration
+
+The migration phase triggers when the market cap reaches 345 SOL or 80% of the tokens are sold. At this point, the tokens migrate to a liquidity pool on a chosen DEX. During migration:
+
+- **Collateral Reserves**: Expected to be around 87.91 SOL.
+- **Market Cap**: 345 SOL at allocation.
+- **Tokens Burned**: Approximately 10 million tokens.
+- **Tokens Migrated**: Approximately 990 million tokens.
+- **Fees**: 6 SOL is deducted, with portions allocated to Raydium, Openbook, and Moonshot.
+
+### Key Calculations
+
+1. **Tokens to Migrate (M)**:
+   - Calculated using the formula:
+     \[
+     M = \frac{\text{{collateral collected}} - \text{{migration fees}}}{\text{{price of token at migration}}}
+     \]
+
+2. **Tokens to Burn (B)**:
+   - The number of tokens to burn is determined by:
+     \[
+     B = T - A - M
+     \]
+     Where \( T \) is the total supply, \( A \) is the allocation at migration, and \( M \) is the number of tokens migrated.
+
+### Conclusion
+
+This bonding curve mechanism governs the pricing and supply dynamics of Moonshot tokens in a decentralized marketplace, ensuring that as more tokens are bought or sold, the price adjusts accordingly. The mechanism includes provisions for migration to a DEX once specific market cap and allocation thresholds are reached, facilitating the seamless transition of the token into broader market liquidity while ensuring a deflationary effect through token burning.
