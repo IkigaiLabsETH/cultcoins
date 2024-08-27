@@ -6,6 +6,9 @@
     max-width: 48rem; /* Match max-width */
     margin: 20px auto;
     color: #fff; /* White text */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust gap for better spacing */
 }
 
 .token-data h1 {
@@ -18,42 +21,43 @@
 
 .token-details {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .token-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem; /* Match form-group input padding */
     background-color: #2a2a2a; /* Match form-group input background-color */
+    padding: 0.75rem; /* Match form-group input padding */
     border-radius: 0.375rem; /* Match form-group input border-radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px); /* Adjust flex for two columns */
+    box-sizing: border-box;
 }
 
 .token-item strong {
     color: #bbb; /* Light grey text for labels */
+    display: block;
+    margin-bottom: 5px;
 }
 
-.error {
-    color: red;
+.error, .loading {
     text-align: center;
-}
-
-.loading {
-    text-align: center;
+    padding: 20px;
+    background-color: #ff4d4d;
+    border-radius: 5px;
 }
 
 .btn {
     display: inline-block;
     padding: 1rem; /* Match button[type="submit"] padding */
-    margin: 20px 0;
+    margin: 10px 0; /* Adjust margin for better spacing */
     background-color: #fbbf24; /* Match button[type="submit"] background-color */
     color: #000; /* Match button[type="submit"] color */
     border-radius: 0.375rem; /* Match button[type="submit"] border-radius */
     text-decoration: none;
     text-align: center;
     font-weight: 700; /* Match button[type="submit"] font-weight */
+    width: calc(50% - 10px); /* Adjust width for two columns */
 }
 
 .btn:hover {

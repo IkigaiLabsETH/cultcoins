@@ -1,12 +1,14 @@
 "use client";
 
 import React from 'react';
-import Launch from "./components/launch";
+// import Launch from "./components/launch";
 import TokenData from './components/tokendata'; // Import TokenData component
 import { buyIx } from './api/buy'; // Import buyIx function
 import { sellIx } from './api/sell'; // Import sellIx function
 import './styles.css'; // Import the CSS file
 // import Button from './components/button'; // Import the Button component
+// import Dashboard from './components/Dashboard';
+
 
 
 
@@ -36,9 +38,6 @@ const Home = () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="launch-section">
-        <Launch />
-      </div>
       <div className="token-data-section">
         <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} /> {/* Use TokenData component */}
       </div>
