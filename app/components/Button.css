@@ -1,0 +1,13 @@
+.brand-button {
+    background-color: var(--brand-primary);
+    color: var(--brand-background);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .brand-button:hover {
+    background-color: var(--brand-accent);
+  }

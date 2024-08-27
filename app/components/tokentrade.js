@@ -8,6 +8,7 @@ import {
   VersionedTransaction,
 } from '@solana/web3.js';
 import testWallet from '../test-wallet.json';
+import Button from './button'; // Import the Button component
 
 const TokenTrade = () => {
   const [transactionHash, setTransactionHash] = useState(null);
@@ -115,8 +116,8 @@ const TokenTrade = () => {
   return (
     <div>
       <h1>Token Trade</h1>
-      <button onClick={handleBuy}>Buy Token</button>
-      <button onClick={handleSell}>Sell Token</button>
+      <Button label="Buy Token" onClick={handleBuy} /> {/* Use Button component */}
+      <Button label="Sell Token" onClick={handleSell} /> {/* Use Button component */}
       {transactionHash && <p>Transaction Hash: {transactionHash}</p>}
     </div>
   );

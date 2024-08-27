@@ -6,6 +6,8 @@ import TokenData from './components/tokendata'; // Import TokenData component
 import { buyIx } from './api/buy'; // Import buyIx function
 import { sellIx } from './api/sell'; // Import sellIx function
 import './styles.css'; // Import the CSS file
+import Button from './components/button'; // Import the Button component
+
 
 const Home = () => {
   const chainId = 'solana';
