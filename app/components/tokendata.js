@@ -1,35 +1,83 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getTokenData } from '../api/token';
+import './tokendata.css'; // Import CSS for styling
 
 const TokenData = ({ chainId, pairIdOrTokenId }) => {
-    const [tokenData, setTokenData] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await getTokenData(chainId, pairIdOrTokenId);
-                setTokenData(data);
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
+                const result = await getTokenData(chainId, pairIdOrTokenId);
+                setData(result);
+            } catch (err) {
+                setError(err.message);
             }
         };
 
         fetchData();
     }, [chainId, pairIdOrTokenId]);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+    if (error) {
+        return <div className="error">Error: {error}</div>;
+    }
+
+    if (!data) {
+        return <div className="loading">Loading...</div>;
+    }
 
     return (
-        <div>
+        <div className="token-data">
             <h1>Token Data</h1>
-            <pre>{JSON.stringify(tokenData, null, 2)}</pre>
+            <div className="token-details">
+                <div className="token-item">
+                    <strong>URL:</strong> {data.url || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Chain ID:</strong> {data.chainId || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>DEX ID:</strong> {data.dexId || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Pair Address:</strong> {data.pairAddress || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Base Token Name:</strong> {data.baseToken?.name || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Base Token Symbol:</strong> {data.baseToken?.symbol || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Quote Token Name:</strong> {data.quoteToken?.name || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Quote Token Symbol:</strong> {data.quoteToken?.symbol || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Price (Native):</strong> {data.priceNative || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Price (USD):</strong> {data.priceUsd || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Market Cap:</strong> ${data.marketCap || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>FDV:</strong> ${data.fdv || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Created At:</strong> {new Date(data.createdAt).toLocaleString() || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Profile Description:</strong> {data.profile?.description || 'N/A'}
+                </div>
+                <div className="token-item">
+                    <strong>Profile Links:</strong> {data.profile?.links?.join(', ') || 'N/A'}
+                </div>
+                {/* Add more fields as necessary */}
+            </div>
         </div>
     );
 };

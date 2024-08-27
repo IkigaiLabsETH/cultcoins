@@ -1,0 +1,57 @@
+.token-data {
+    background-color: #333; /* Dark background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    color: #fff; /* White text */
+}
+
+.token-data h1 {
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+.token-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.token-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #444; /* Slightly lighter dark background */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.token-item strong {
+    color: #bbb; /* Light grey text for labels */
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #0070f3;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+}

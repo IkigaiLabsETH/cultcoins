@@ -7,7 +7,9 @@ export const getTokenData = async (chainId: string, pairIdOrTokenId: string) => 
     });
 
     if (!response.ok) {
-        throw new Error('Network response was not ok');
+        const errorText = await response.text();
+        console.error('Error fetching token data:', response.status, errorText);
+        throw new Error(`Network response was not ok: ${response.status} ${errorText}`);
     }
 
     const data = await response.json();
