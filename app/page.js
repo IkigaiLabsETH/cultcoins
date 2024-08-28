@@ -9,6 +9,8 @@ import './styles.css'; // Import the CSS file
 // import Button from './components/button'; // Import the Button component
 // import Dashboard from './components/Dashboard';
 import Meteora from './components/meteora';
+import PairData from './components/PairData'; // Import PairData component
+
 
 
 
@@ -44,6 +46,7 @@ const Home = () => {
       </div>
       <div className="App">
             <Meteora />
+            <PairData />
         </div>
       <div className="button-container">
         <button className="buy-button" onClick={handleBuy}>
