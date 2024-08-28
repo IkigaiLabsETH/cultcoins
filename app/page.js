@@ -8,7 +8,7 @@ import { sellIx } from './api/sell'; // Import sellIx function
 import './styles.css'; // Import the CSS file
 // import Button from './components/button'; // Import the Button component
 // import Dashboard from './components/Dashboard';
-import Meteora from './Meteora';
+import Meteora from './components/meteora';
 
 
 
