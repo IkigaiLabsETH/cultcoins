@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Meteora.css';
+import './meteora.css';
 
 const Meteora = () => {
     const [metrics, setMetrics] = useState(null);
