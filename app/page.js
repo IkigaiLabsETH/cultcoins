@@ -8,6 +8,7 @@ import { sellIx } from './api/sell'; // Import sellIx function
 import './styles.css'; // Import the CSS file
 // import Button from './components/button'; // Import the Button component
 // import Dashboard from './components/Dashboard';
+import Meteora from './Meteora';
 
 
 
@@ -41,6 +42,9 @@ const Home = () => {
       <div className="token-data-section">
         <TokenData chainId={chainId} pairIdOrTokenId={pairIdOrTokenId} /> {/* Use TokenData component */}
       </div>
+      <div className="App">
+            <Meteora />
+        </div>
       <div className="button-container">
         <button className="buy-button" onClick={handleBuy}>
           <span className="icon">⬆️</span> Buy

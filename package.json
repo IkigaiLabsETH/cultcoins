@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@meteora-ag/dlmm": "^1.1.0",
     "@solana/spl-token": "^0.4.8",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
@@ -18,6 +20,7 @@
     "@wen-moon-ser/moonshot-sdk": "^2.0.5",
     "express": "^4.19.2",
     "next": "14.2.6",
+    "node-fetch": "^3.3.2",
     "pino-pretty": "^11.2.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
