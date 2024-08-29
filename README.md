@@ -86,6 +86,8 @@ The migration phase triggers when the market cap reaches 345 SOL or 80% of the t
 
 This bonding curve mechanism governs the pricing and supply dynamics of Moonshot tokens in a decentralized marketplace, ensuring that as more tokens are bought or sold, the price adjusts accordingly. The mechanism includes provisions for migration to a DEX once specific market cap and allocation thresholds are reached, facilitating the seamless transition of the token into broader market liquidity while ensuring a deflationary effect through token burning.
 
+Moonshot has an iOS app that makes buying and selling Solana-based memecoins seamless by allowing transactions via Apple Pay, PayPal, debit, and credit cards. With a sleek design and no need for traditional wallets or gas fees, Moonshot is being hailed as the "Robinhood for memecoins," targeting mass adoption.
+
 ### **Key Data Points from Solana Tracker**
 
 1. **Accounts**:
