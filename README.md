@@ -169,3 +169,12 @@ This bonding curve mechanism governs the pricing and supply dynamics of Moonshot
 6. **Transparency and Trust**:
    - By using a reputable and transparent API like Solana Tracker’s Swap API, you ensure that all swaps are conducted on-chain with verifiable records. This transparency builds trust with users, who can verify that their swaps are being executed fairly.
    - **Benefit**: Building trust is critical in the blockchain space, and using a reliable API helps solidify your platform’s reputation as secure and user-friendly.
+
+### References
+
+https://github.com/YZYLAB/solana-swap
+
+https://github.com/YZYLAB/solana-volume-bot
+
+https://github.com/YZYLAB/solana-trade-bot
+
