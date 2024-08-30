@@ -22,7 +22,7 @@ const Swap = () => {
     <div className="container">
       <div className="swapBox">
         <div className="section">
-          <p>You're trading tokens</p>
+          <p>You are trading tokens</p>
           <div className="inputBox">
             <span>$VIBES</span>
             <input
