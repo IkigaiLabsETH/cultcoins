@@ -10,7 +10,6 @@ import './styles.css'; // Import the CSS file
 // import Dashboard from './components/Dashboard';
 import Meteora from './components/meteora';
 import PairData from './components/PairData'; // Import PairData component
-import TokenCard from './components/TokenCard';
 import Swap from './components/swap'; // Import the Swap component
 
 
@@ -56,7 +55,6 @@ const Home = () => {
           <span className="icon">⬇️</span> Sell
         </button>
       </div>
-      <TokenCard />    
       <Swap />
     </main>
   );
